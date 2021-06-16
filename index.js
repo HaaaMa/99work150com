@@ -27,7 +27,7 @@ bot.on('ready', () => {
 
 bot.on('message', async message => {
     let prefix;
-    if (message.author.bot || message.channel.type === "dm") return;
+    if (message.author.bot || message.channel.type === "server") return;
         try {
             let fetched = await db.fetch(`prefix_${message.guild.id}`);
             if (fetched == null) {
