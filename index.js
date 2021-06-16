@@ -40,7 +40,7 @@ bot.on('message', async message => {
     };
   
     if (message.author.bot) return;
-    if (message.channel.type === "dm") return;
+    if (message.channel.type === "server") return;
 
     let messageFetch = db.fetch(`guildMessages_${message.guild.id}`)
     if (messageFetch === null) return;
