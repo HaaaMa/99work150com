@@ -54,7 +54,7 @@ module.exports = {
                 }
             })
 
-            return message.server.send(embed)
+            return message.author.send(embed)
         } else {
             let command = bot.commands.get(bot.aliases.get(args[0].toLowerCase()) || args[0].toLowerCase())
             if (!command) return message.channel.send(embed.setTitle("**Invalid Command!**").setDescription(`**Do \`${prefix}help\` For the List Of the Commands!**`))
